@@ -20,7 +20,7 @@ countArrangements diffs = last table
 main :: IO ()
 main = do
   input <- getContents
-  let jolts = sort $ fmap read $ lines input :: [Int]
-      diffs = 0 : zipWith (-) (tail jolts) jolts ++ [3]
+  let jolts = 0 : (sort $ fmap read $ lines input)
+      diffs = zipWith (-) (tail jolts) jolts ++ [3]
   print $ countArrangements diffs
 
