@@ -1,6 +1,8 @@
 #!/usr/bin/env stack
 -- stack --resolver lts-16.24 script --package parsec,besout --extra-dep besout-0.2.0.1
 
+-- Bezout package has version issues, but I need it for modular inverse
+
 import Text.Parsec
 import Data.Maybe
 import Data.List
